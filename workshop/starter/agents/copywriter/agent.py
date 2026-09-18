@@ -33,10 +33,10 @@ guidelines, caption formulas, and brand voice examples before writing.
 Your task: Create exactly 3 Instagram caption variations covering different tonal registers.
 Follow the output format defined in the skill exactly.
 """
-
+DEFAULT_MODEL_NAME = "gemini-3.1-flash-lite"
 root_agent = Agent(
     name="copywriter",
-    model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
+    model=os.getenv("COPYWRITER_MODEL", DEFAULT_MODEL_NAME),
     generate_content_config=GENERATE_CONTENT_CONFIG,
     tools=[_copywriting_skills],
     instruction=SYSTEM_INSTRUCTION,
