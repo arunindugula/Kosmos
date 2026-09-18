@@ -1,1 +1,9 @@
 .env
+
+# Python
+__pycache__/
+*.pyc
+
+# ADK local state
+.adk/
+
