@@ -56,9 +56,10 @@ If `generate_image` returns an error, include the error message and continue wit
 # Same Agent pattern you used in Step 4. The only difference between
 # specialist agents is the name, description, and instruction.
 # =============================================================================
+DEFAULT_MODEL_NAME = "gemini-3.1-flash-lite"
 root_agent = Agent(
     name="designer",
-    model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
+    model=os.getenv("DESIGNER_MODEL", DEFAULT_MODEL_NAME),
     generate_content_config=GENERATE_CONTENT_CONFIG,
     tools=[FunctionTool(func=generate_image)],
     instruction=SYSTEM_INSTRUCTION,
