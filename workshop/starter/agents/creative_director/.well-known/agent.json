@@ -1,0 +1,45 @@
+{
+  "name": "creative_director",
+  "description": "Creative Director orchestrator that coordinates specialist agents",
+  "url": "http://localhost:8080/a2a",
+  "version": "0.0.1",
+  "capabilities": {},
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "supportsAuthenticatedExtendedCard": false,
+  "skills": [
+    {
+      "id": "creative_director",
+      "name": "model",
+      "description": "Creative Director orchestrator that coordinates specialist agents to produce social media campaigns. Delegates market research to brand_strategist, caption writing to copywriter, image creation to designer, and quality review to critic.",
+      "tags": ["llm"],
+      "inputModes": null,
+      "outputModes": null,
+      "examples": []
+    },
+    {
+      "id": "creative_director-display_image",
+      "name": "display_image",
+      "description": "Tool: display_image",
+      "tags": ["llm", "tools"],
+      "inputModes": null,
+      "outputModes": null
+    },
+    {
+      "id": "creative_director-get_image_links",
+      "name": "get_image_links",
+      "description": "Tool: get_image_links",
+      "tags": ["llm", "tools"],
+      "inputModes": null,
+      "outputModes": null
+    },
+    {
+      "id": "creative_director-sub-agents",
+      "name": "sub-agents",
+      "description": "Orchestrates specialist agents: brand_strategist, copywriter, designer, critic, project_manager via RemoteA2aAgent",
+      "tags": ["llm", "orchestration"],
+      "inputModes": null,
+      "outputModes": null
+    }
+  ]
+}

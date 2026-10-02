@@ -1,0 +1,29 @@
+{
+  "name": "critic",
+  "description": "Creative critic for reviewing campaign materials and providing constructive feedback",
+  "url": "http://localhost:8080/a2a",
+  "version": "0.0.1",
+  "capabilities": {},
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "supportsAuthenticatedExtendedCard": false,
+  "skills": [
+    {
+      "id": "critic",
+      "name": "model",
+      "description": "Creative critic for reviewing campaign materials and providing constructive feedback. I am a Creative Director and Quality Assurance Specialist. I review Instagram campaign materials (copy and visuals) and provide structured, actionable feedback with approval status (APPROVED or NEEDS_REVISION) and scores out of 10. When GCS URIs are provided, I call review_image for each image before scoring.",
+      "tags": ["llm"],
+      "inputModes": null,
+      "outputModes": null,
+      "examples": []
+    },
+    {
+      "id": "critic-review_image",
+      "name": "review_image",
+      "description": "Tool: review_image — reviews a generated image from GCS, returning score, approval_status, what_works, issues, and suggestions",
+      "tags": ["llm", "tools"],
+      "inputModes": null,
+      "outputModes": null
+    }
+  ]
+}

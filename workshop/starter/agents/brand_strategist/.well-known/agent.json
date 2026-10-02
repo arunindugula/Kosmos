@@ -1,0 +1,29 @@
+{
+  "name": "brand_strategist",
+  "description": "Brand Strategist performs market research, trend analysis and competitive insights",
+  "url": "http://localhost:8082/a2a",
+  "version": "0.0.1",
+  "capabilities": {},
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "supportsAuthenticatedExtendedCard": false,
+  "skills": [
+    {
+      "id": "brand_strategist",
+      "name": "model",
+      "description": "Brand Strategist performs market research, trend analysis and competitive insights. I am a Brand Strategist specializing in market research and trend analysis. My role is RESEARCH ONLY. I do NOT create campaign content, captions, or designs. My expertise: identifying target audience insights and behaviors, analyzing competitor strategies, researching current social media trends, understanding platform algorithms and best practices.",
+      "tags": ["llm"],
+      "inputModes": null,
+      "outputModes": null,
+      "examples": []
+    },
+    {
+      "id": "brand_strategist-google_search",
+      "name": "google_search",
+      "description": "Tool: google_search",
+      "tags": ["llm", "tools"],
+      "inputModes": null,
+      "outputModes": null
+    }
+  ]
+}

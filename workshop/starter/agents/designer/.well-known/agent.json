@@ -1,0 +1,29 @@
+{
+  "name": "designer",
+  "description": "Creative visual designer for generating social media image concepts",
+  "url": "http://localhost:8080/a2a",
+  "version": "0.0.1",
+  "capabilities": {},
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "supportsAuthenticatedExtendedCard": false,
+  "skills": [
+    {
+      "id": "designer",
+      "name": "model",
+      "description": "Creative visual designer for generating social media image concepts. I am a Visual Content Director specializing in Instagram aesthetics. I review brand strategy insights and copywriter captions, then for each caption create exactly 1 visual concept and generate the actual image using generate_image. Each concept includes a detailed prompt, visual style, color palette, mood, and Instagram dimensions (1080x1080 or 1080x1350). I return the GCS URI of each generated image.",
+      "tags": ["llm"],
+      "inputModes": null,
+      "outputModes": null,
+      "examples": []
+    },
+    {
+      "id": "designer-generate_image",
+      "name": "generate_image",
+      "description": "Tool: generate_image — generates an image from a prompt and uploads it to GCS, returning a gcs_uri",
+      "tags": ["llm", "tools"],
+      "inputModes": null,
+      "outputModes": null
+    }
+  ]
+}

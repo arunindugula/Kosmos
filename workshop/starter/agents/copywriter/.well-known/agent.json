@@ -1,0 +1,29 @@
+{
+  "name": "copywriter",
+  "description": "Expert social media copywriter for creating engaging captions and copy",
+  "url": "http://localhost:8080/a2a",
+  "version": "0.0.1",
+  "capabilities": {},
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "supportsAuthenticatedExtendedCard": false,
+  "skills": [
+    {
+      "id": "copywriter",
+      "name": "model",
+      "description": "Expert social media copywriter for creating engaging captions and copy. I am an expert Social Media Copywriter specializing in Instagram content. I review brand strategist research on audience insights, competitor analysis, and trending topics before writing copy. My task is to create exactly 3 Instagram caption variations covering different tonal registers.",
+      "tags": ["llm"],
+      "inputModes": null,
+      "outputModes": null,
+      "examples": []
+    },
+    {
+      "id": "copywriter-instagram-copywriting",
+      "name": "instagram-copywriting",
+      "description": "Skill toolset providing Instagram platform guidelines, caption formulas, and brand voice examples",
+      "tags": ["llm", "tools"],
+      "inputModes": null,
+      "outputModes": null
+    }
+  ]
+}

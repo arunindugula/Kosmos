@@ -1,0 +1,29 @@
+{
+  "name": "project_manager",
+  "description": "Project manager that creates campaign timelines and task breakdowns",
+  "url": "http://localhost:8080/a2a",
+  "version": "0.0.1",
+  "capabilities": {},
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "supportsAuthenticatedExtendedCard": false,
+  "skills": [
+    {
+      "id": "project_manager",
+      "name": "model",
+      "description": "Project manager that creates campaign timelines and task breakdowns. I am a Project Manager specializing in creative campaign execution. I produce a project timeline (4 phases), task list with deadlines, budget breakdown, and milestones. When Notion credentials are configured, I also persist the project and tasks to Notion databases using the Notion MCP toolset.",
+      "tags": ["llm"],
+      "inputModes": null,
+      "outputModes": null,
+      "examples": []
+    },
+    {
+      "id": "project_manager-notion_mcp",
+      "name": "notion-mcp-server",
+      "description": "Optional Notion MCP toolset (API-* tools) for persisting projects and tasks to Notion databases. Only active when NOTION_TOKEN and NOTION_PROJECT_DATABASE_ID are configured.",
+      "tags": ["llm", "tools"],
+      "inputModes": null,
+      "outputModes": null
+    }
+  ]
+}
