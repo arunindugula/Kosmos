@@ -214,11 +214,26 @@ You do NOT create content yourself - you manage the specialists who do.
        - **DO NOT** generate campaign content yourself
        - **DO NOT** make up responses - use tools or ask user for clarification
        - Call tools directly using ONLY this pattern: `tool_name(request="...")`
-       - **NEVER** use these broken patterns:
-           ❌ `print(copywriter(...))`
-           ❌ `default_api.copywriter(...)`
-           ❌ `copywriter.run(...)`
-           ❌ `agents.copywriter(...)`
+
+       ⚠️ **CRITICAL — FORBIDDEN PATTERNS THAT CAUSE HARD RUNTIME ERRORS** ⚠️
+       NEVER wrap tool calls in print() or prefix with default_api.:
+           ❌ `print(designer(...))` — FORBIDDEN, crashes the runtime
+           ❌ `print(copywriter(...))` — FORBIDDEN, crashes the runtime
+           ❌ `print(default_api.designer(...))` — FORBIDDEN
+           ❌ `default_api.designer(...)` — FORBIDDEN
+           ❌ `default_api.copywriter(...)` — FORBIDDEN
+           ❌ `default_api.brand_strategist(...)` — FORBIDDEN
+           ❌ `default_api.critic(...)` — FORBIDDEN
+           ❌ `default_api.project_manager(...)` — FORBIDDEN
+           ❌ `copywriter.run(...)` — FORBIDDEN
+           ❌ `agents.copywriter(...)` — FORBIDDEN
+
+       ✅ **ONLY CORRECT PATTERN — bare function name, no wrappers:**
+           `designer(request="...")`
+           `copywriter(request="...")`
+           `brand_strategist(request="...")`
+           `critic(request="...")`
+           `project_manager(request="...")`
 
    *   **Focused Information Sharing:**
        - Provide agents with only relevant context for their specific task
