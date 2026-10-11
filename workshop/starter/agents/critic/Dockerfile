@@ -1,5 +1,8 @@
+# Build stage: pull uv for the correct architecture
+FROM --platform=linux/amd64 ghcr.io/astral-sh/uv:latest AS uv-installer
+
 # Use the official Python base image
-FROM python:3.12-slim
+FROM --platform=linux/amd64 python:3.12-slim
 
 # Set working directory
 WORKDIR /app
@@ -12,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install uv
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
+COPY --from=uv-installer /uv /usr/local/bin/uv
 
 # Copy pyproject.toml first for better layer caching
 COPY pyproject.toml .
@@ -36,4 +39,4 @@ ENV HOST=0.0.0.0
 EXPOSE 8080
 
 # Run the A2A server
-CMD ["uv", "run", "python", "agent.py"]
+CMD ["/app/.venv/bin/python", "agent.py"]
